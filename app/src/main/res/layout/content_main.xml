@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.getui.sdk.util.http_tiny.sample.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/txt_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintHorizontal_bias="0.47" />
+
+    <Button
+        android:id="@+id/basic_get_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:text="basic get"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/patch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:text="patch"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <Button
+        android:id="@+id/post_form_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:text="post form"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/put_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:text="put"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:text="delete"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/post_json_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:text="post json"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/multipart_upload_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="99dp"
+        android:text="multipart upload"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="231dp" />
+
+</android.support.constraint.ConstraintLayout>
