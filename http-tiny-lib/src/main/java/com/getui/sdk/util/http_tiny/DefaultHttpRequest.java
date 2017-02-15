@@ -44,11 +44,11 @@ public class DefaultHttpRequest extends HttpRequest {
                 }
             }
             if (isMultipartsEmpty() && body == null) {
-                connection.setDoInput(false);
+                connection.setDoOutput(false);
             } else {
-                connection.setDoInput(true);
+                connection.setDoOutput(true);
             }
-            connection.setDoOutput(true);
+            connection.setDoInput(true);
             connection.setUseCaches(isUseCache);
             if (body != null) {
                 writeBodyToConnection(connection);

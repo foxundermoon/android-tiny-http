@@ -17,7 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="0.8"
         app:layout_constraintHorizontal_bias="0.47" />
 
     <Button
@@ -28,7 +28,8 @@
         android:layout_marginStart="42dp"
         android:text="basic get"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="37dp" />
 
     <Button
         android:id="@+id/patch_btn"
@@ -38,7 +39,8 @@
         android:layout_marginRight="45dp"
         android:text="patch"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="81dp" />
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/post_form_btn" />
 
     <Button
         android:id="@+id/post_form_btn"
@@ -48,7 +50,8 @@
         android:layout_marginRight="45dp"
         android:text="post form"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="37dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/put_btn"
@@ -58,7 +61,8 @@
         android:layout_marginStart="42dp"
         android:text="put"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="81dp" />
+        android:layout_marginTop="53dp"
+        app:layout_constraintTop_toBottomOf="@+id/basic_get_btn" />
 
     <Button
         android:id="@+id/delete_btn"
@@ -68,7 +72,8 @@
         android:layout_marginStart="42dp"
         android:text="delete"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="160dp" />
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/put_btn" />
 
     <Button
         android:id="@+id/post_json_btn"
@@ -78,19 +83,15 @@
         android:layout_marginRight="45dp"
         android:text="post json"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="160dp" />
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/patch_btn" />
 
     <Button
         android:id="@+id/multipart_upload_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="99dp"
         android:text="multipart upload"
-        app:layout_constraintHorizontal_bias="0.82"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="231dp" />
+        tools:layout_editor_absoluteY="333dp"
+        tools:layout_editor_absoluteX="162dp" />
 
 </android.support.constraint.ConstraintLayout>
