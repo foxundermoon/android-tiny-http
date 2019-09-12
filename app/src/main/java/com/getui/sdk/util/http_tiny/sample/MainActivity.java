@@ -1,5 +1,6 @@
 package com.getui.sdk.util.http_tiny.sample;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,12 @@ import com.getui.sdk.util.http_tiny.HttpException;
 import com.getui.sdk.util.http_tiny.HttpRequest;
 import com.getui.sdk.util.http_tiny.HttpResponse;
 import com.getui.sdk.util.http_tiny.IllegalUsageException;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.net.MalformedURLException;
 
@@ -25,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        httpRequest =  new DefaultHttpRequest();
+
+        httpRequest = new DefaultHttpRequest();
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,7 +50,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.patch_btn).setOnClickListener(v -> patch());
         findViewById(R.id.delete_btn).setOnClickListener(v -> delete());
         findViewById(R.id.multipart_upload_btn).setOnClickListener(v -> multipatUpload());
+
+        Dexter.withActivity(this)
+                .withPermission(Manifest.permission.INTERNET)
+                .withListener(new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted(PermissionGrantedResponse response) {
+                        p("onPermissionGranted:" + response.getPermissionName());
+
+                    }
+
+                    @Override
+                    public void onPermissionDenied(PermissionDeniedResponse response) {
+                        p("onPermissionDenied:" + response.getPermissionName());
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                        p("onPermissionRationaleShouldBeShown: " + permission.getName() + "   token-->" + token.toString());
+
+                    }
+                }).check();
     }
+
 
     private void multipatUpload() {
 
